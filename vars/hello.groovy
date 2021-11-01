@@ -8,4 +8,5 @@ def call(name, configHost) {
   configHost.setHello = true
   println env.IMAGE_NAME
   println env.IMAGE_TAG
+  env.IMAGE_TAG = 'changed-tag'
 }
