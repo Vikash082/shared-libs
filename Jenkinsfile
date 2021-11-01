@@ -20,5 +20,11 @@ pipeline {
                 }
             }
         }
+
+        stage('Next Step') {
+            steps {
+                println IMAGE_TAG
+            }
+        }
     }
 }
