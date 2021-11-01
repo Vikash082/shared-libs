@@ -6,11 +6,15 @@ skipAccProvisionClusters = ["fab3", "k8s-bm-1", "os-bm-1", "k8sbm2-bm"]
 
 pipeline {
     agent any
+    environment {
+        IMAGE_NAME = 'noirolabs/acc-pytests'
+    }
     stages {
         stage('Experiment') {
             steps {
                 script {
                     echo "Hi there!"
+                    env.IMAGE_TAG = 'my-tag'
                     hello("Vikash", configHost)
                     println configHost
                 }

@@ -6,4 +6,6 @@ def call(name, configHost) {
   world.callMyWorld()
   println configHost
   configHost.setHello = true
+  println env.IMAGE_NAME
+  println env.IMAGE_TAG
 }
