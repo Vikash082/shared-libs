@@ -1,8 +1,9 @@
 #!/usr/bin/env groovy
 
-def call(String name = 'human') {
+def call(name, configHost) {
   echo "Hello, ${name}."
-  world()
+  world.callWorld()
+  world.callMyWorld()
   println configHost
-  println skipAccProvisionClusters
+  configHost.setHello = true
 }
