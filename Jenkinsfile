@@ -1,7 +1,7 @@
 @Library('mylibrary') _
 
 def configHost = [host: 'noiro-containers-ctrl']
-skipAccProvisionClusters = ["fab3", "k8s-bm-1", "os-bm-1", "k8sbm2-bm"]
+// skipAccProvisionClusters = ["fab3", "k8s-bm-1", "os-bm-1", "k8sbm2-bm"]
 
 
 pipeline {
@@ -15,6 +15,7 @@ pipeline {
                 script {
                     echo "Hi there!"
                     env.IMAGE_TAG = 'my-tag'
+                    env.skipAccProvisionClusters = ["fab3", "k8s-bm-1", "os-bm-1", "k8sbm2-bm"]
                     hello("Vikash", configHost)
                     println configHost
                 }
