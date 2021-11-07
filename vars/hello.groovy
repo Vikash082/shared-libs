@@ -10,4 +10,5 @@ def call(name, configHost) {
   println env.IMAGE_TAG
   env.IMAGE_TAG = 'changed-tag'
   println env.skipAccProvisionClusters
+  println env.whatIsMyName
 }
